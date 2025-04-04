@@ -1,0 +1,34 @@
+.message-video-section {
+  background-color: #000;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+
+  .message-controlled-video {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    margin-bottom: 2rem;
+  }
+
+  .message-caption {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #FF69B4;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #FFD700;
+    }
+  }
+}
