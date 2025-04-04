@@ -11,7 +11,6 @@ const imagePaths = [
     '/poshita_pics/v5.jpg',
     '/poshita_pics/v&d1.jpg',
     '/poshita_pics/v&d2.jpg',
-    '/poshita_pics/v&d3.JPG',
     '/poshita_pics/d1.jpg',
     '/poshita_pics/v&d4.jpg',
     '/poshita_pics/d2.jpeg',

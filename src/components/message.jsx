@@ -21,7 +21,7 @@ const Message = () => {
             <video
                 ref={videoRef}
                 className="message-controlled-video"
-                src="/poshita_pics/vanessa_message.mov"
+                src="/poshita_pics/vanessa_message.mp4"
                 controls
             />
         </div>
