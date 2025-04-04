@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useRef, useState} from 'react';
 import { motion } from 'framer-motion';
 import Confetti from './confetti';
 import '../styles/egg_animation.scss';
@@ -14,9 +14,16 @@ const EggAnimation = ({ onCrackComplete }) => {
     const [showMessage, setShowMessage] = useState(false);
     const [fadeOut, setFadeOut] = useState(false);
 
+    // sound refs
+    const crackSound = useRef(new Audio('/sounds/egg_sound.mp3'))
+    const surpriseSound = useRef(new Audio('/sounds/yay.mp3'))
+
     const handleClick = () => {
         const newColor = colors[Math.floor(Math.random() * colors.length)];
         setBackgroundColor(newColor);
+
+        crackSound.current.currentTime = 0;
+        crackSound.current.play();
 
         setTimeout(() => {
             if (stage < egg.length - 1) {
@@ -24,6 +31,7 @@ const EggAnimation = ({ onCrackComplete }) => {
             }
 
             if (stage === egg.length - 1) {
+                surpriseSound.current.play();
                 setShowConfetti(true);
                 setShowChicken(true);
 
