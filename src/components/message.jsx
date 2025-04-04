@@ -7,6 +7,8 @@ const Message = () => {
 
     const togglePlay = () => {
         const video = videoRef.current;
+        if (!video) return;
+
         if (video.paused) {
             video.play();
             setIsPlaying(true);
@@ -22,8 +24,10 @@ const Message = () => {
                 ref={videoRef}
                 className="message-controlled-video"
                 src="/poshita_pics/vanessa_message.mp4"
-                controls
             />
+            <button onClick={togglePlay} className="play-button">
+                {isPlaying ? 'Pause' : 'Play'}
+            </button>
         </div>
     );
 };
